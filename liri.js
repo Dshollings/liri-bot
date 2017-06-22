@@ -5,12 +5,9 @@ var arg3 = process.argv[3];
 var fs = require("fs");
 
 
-fs.appendFile("write.txt", (arg2 + " " + arg3), function(err) {
+fs.appendFile("log.txt", (arg2 + " " + arg3 + "\r\n"), function(err) {
   if (err) {
     console.log(err);
-  }
-  else {
-    console.log("Content Added!");
   }
 });
 
